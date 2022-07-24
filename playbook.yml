@@ -1,0 +1,21 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: all
+
+  tasks:
+    - name: Execute apt update if the last one is more than 1 hour ago
+      become: yes
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      when: ansible_pkg_mgr == "apt"
+
+    - name: Ensure the gpg package is installed
+      become: yes
+      package:
+        name: gpg
+
+    - name: Include the alvistack.podman role
+      include_role: { name: alvistack.podman }
+      vars:
+        ansible_become: yes
