@@ -1,2 +1,4 @@
 ---
-- alvistack.podman
+roles:
+  - name: alvistack.podman
+    # version: "6.3.1"
