@@ -1,6 +1,7 @@
 #!/usr/bin/env ansible-playbook
 ---
-- hosts: all
+- name: Main play
+  hosts: all
 
   pre_tasks:
     - name: Check Ansible version
@@ -10,18 +11,18 @@
 
   tasks:
     - name: Execute apt update if the last one is more than 1 hour ago
-      become: yes
+      become: true
       ansible.builtin.apt:
-        update_cache: yes
+        update_cache: true
         cache_valid_time: 3600
       when: ansible_pkg_mgr == "apt"
 
     - name: Ensure the gpg package is installed
-      become: yes
+      become: true
       ansible.builtin.package:
         name: gpg
 
     - name: Include the alvistack.podman role
       ansible.builtin.include_role: { name: alvistack.podman }
       vars:
-        ansible_become: yes
+        ansible_become: true
