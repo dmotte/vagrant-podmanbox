@@ -22,7 +22,7 @@
       ansible.builtin.package:
         name: gpg
 
-    - name: Include the alvistack.podman role
+    - name: Install Podman
       ansible.builtin.include_role: { name: alvistack.podman }
       vars:
         ansible_become: true
