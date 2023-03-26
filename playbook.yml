@@ -17,12 +17,21 @@
         cache_valid_time: 3600
       when: ansible_pkg_mgr == "apt"
 
-    - name: Ensure the gpg package is installed
+    - name: Ensure pip is installed
       become: true
       ansible.builtin.package:
-        name: gpg
+        name: python3-pip # Needed by the "ansible.builtin.pip" Ansible module
 
     - name: Install Podman
-      ansible.builtin.include_role: { name: alvistack.podman }
+      ansible.builtin.include_role: { name: dmotte.podman }
       vars:
         ansible_become: true
+        podman_users:
+          - name: "{{ ansible_user }}"
+
+    - name: Install podman-compose with pip
+      become: true
+      ansible.builtin.pip:
+        # Podman-compose version 0.1.x is required for compatibility with
+        # Podman 3 (the official Podman version on Debian 11 bullseye)
+        name: podman-compose==0.1.*
