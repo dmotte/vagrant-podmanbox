@@ -7,7 +7,7 @@
 
 :package: **Debian Vagrant box** with **Podman** (and **podman-compose**).
 
-This project uses [dmotte/ansible-role-podman](https://github.com/dmotte/ansible-role-podman) to install the latest version of _Podman_ inside the VM.
+This project uses [dmotte/ansible-role-podman](https://github.com/dmotte/ansible-role-podman) to install _Podman_ inside the VM.
 
 > :package: This box is also on **Vagrant Cloud** as [`dmotte/podmanbox`](https://app.vagrantup.com/dmotte/boxes/podmanbox).
 
