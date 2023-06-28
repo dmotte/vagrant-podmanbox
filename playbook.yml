@@ -22,7 +22,7 @@
       vars:
         ansible_become: true
         podman_users:
-          - name: "{{ ansible_user }}"
+          - name: "{{ ansible_user_id }}"
 
     - name: Install podman-compose
       become: true
