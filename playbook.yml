@@ -23,6 +23,7 @@
         ansible_become: true
         podman_users:
           - name: "{{ ansible_user_id }}"
+            set_linger: true
 
     - name: Install podman-compose
       become: true
