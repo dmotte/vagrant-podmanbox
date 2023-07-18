@@ -21,11 +21,7 @@
       ansible.builtin.include_role: { name: dmotte.podman }
       vars:
         ansible_become: true
+        podman_compose: true
         podman_users:
           - name: "{{ ansible_user_id }}"
             set_linger: true
-
-    - name: Install podman-compose
-      become: true
-      ansible.builtin.package:
-        name: podman-compose
