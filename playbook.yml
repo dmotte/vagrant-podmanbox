@@ -19,7 +19,7 @@
 
     - name: Install Podman
       ansible.builtin.include_role: { name: dmotte.podman }
-      vars:
+      vars: # noqa: var-naming[no-role-prefix]
         ansible_become: true
         podman_compose: true
         podman_users:
