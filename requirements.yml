@@ -1,4 +1,0 @@
----
-roles:
-  - name: dmotte.podman
-    # version: "3.0.0"
