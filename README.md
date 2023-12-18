@@ -11,4 +11,4 @@
 
 ## Usage
 
-See [the `test` folder of dmotte/vagrant-dockerbox](https://github.com/dmotte/vagrant-dockerbox/tree/main/test) for an usage example of another Vagrant box which is very similar to this one.
+See https://github.com/dmotte/misc/blob/main/examples/vagrant-ansible-provisioner for inspiration on how you could use this box.
