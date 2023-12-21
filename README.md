@@ -2,7 +2,7 @@
 
 ![icon](icon-128.png)
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dmotte/vagrant-podmanbox/release.yml?branch=main&logo=github&style=flat-square)](https://github.com/dmotte/vagrant-podmanbox/actions)
+[![GitHub main workflow](https://img.shields.io/github/actions/workflow/status/dmotte/vagrant-podmanbox/main.yml?branch=main&logo=github&label=main&style=flat-square)](https://github.com/dmotte/vagrant-podmanbox/actions)
 [![Vagrant Cloud](https://img.shields.io/badge/vagrant-dmotte/podmanbox-blue?logo=vagrant&style=flat-square)](https://app.vagrantup.com/dmotte/boxes/podmanbox)
 
 :package: **Debian Vagrant box** with **Podman** (and **podman-compose**).
